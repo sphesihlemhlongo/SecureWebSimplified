@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP vs HTTPS</title>
+</head>
+<body>
+    <h1>HTTP vs. HTTPS</h1>
+    <div>
+        <h2>HTTP Data Transfer</h2>
+        <button id="http">Simulate HTTP</button>
+        <p id="http-result"></p>
+    </div>
+    <div>
+        <h2>HTTPS Data Transfer</h2>
+        <button id="https">Simulate HTTPS</button>
+        <p id="https-result"></p>
+    </div>
+
+    <script>
+        document.getElementById('http').addEventListener('click', async () => {
+            const response = await fetch('/simulate-http');
+            const data = await response.text();
+            document.getElementById('http-result').innerText = data;
+        });
+
+        document.getElementById('https').addEventListener('click', async () => {
+            const response = await fetch('/simulate-https');
+            const data = await response.text();
+            document.getElementById('https-result').innerText = `Encrypted Data: ${data}`;
+        });
+    </script>
+</body>
+</html>
