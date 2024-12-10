@@ -1,0 +1,16 @@
+# Node.js dependencies
+node_modules/
+
+# Environment files
+.env
+
+# Logs
+*.log
+
+# Cache directories
+.cache/
+dist/
+
+# System files
+.DS_Store
+Thumbs.db

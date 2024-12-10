@@ -5,8 +5,7 @@ const httpVsHttpsRoutes = require('./routes/httpVsHttps'); // Import the HTTP/HT
 const app = express();
 const PORT = 3000;
 
-require('dotenv').config();
-const secretKey = process.env.SECRET_KEY;
+
 
 
 // Serve static files from the public folder
