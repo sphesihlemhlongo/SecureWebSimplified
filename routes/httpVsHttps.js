@@ -30,5 +30,11 @@ router.get('/simulate-https', (req, res) => {
     res.send(`Encrypted Data: ${encrypted}`);
 });
 
+// Serve HTTPS Certificate Info Page
+router.get('/certificate-info', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'public', 'certificate-info.html'));
+});
+
+
 
 module.exports = router;
